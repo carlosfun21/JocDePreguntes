@@ -14,14 +14,14 @@ namespace JocDePreguntes
 
             while (eleccio != 0)
             {
-                if (eleccio == 1) menuPokemon();
-                if (eleccio == 2) menuOperacions();
-                //if (eleccio == 3) menuSmite();
+                if (eleccio == 1) temaPokemon();
+                if (eleccio == 2) temaOperacions();
+                if (eleccio == 3) temaSmite();
 
 
                 Console.WriteLine("Pots triar un altre tema. En cas de voler sortir polsa 0 \n");
                 mostrarMenu();
-                eleccio = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Triar tema :");  eleccio = Convert.ToInt32(Console.ReadLine());
 
 
             }
@@ -35,7 +35,7 @@ namespace JocDePreguntes
 
         }
         
-        public static void menuPokemon()
+        public static void temaPokemon()
         {
             char resposta;
             int comptador = 0;
@@ -80,7 +80,7 @@ namespace JocDePreguntes
 
         }
 
-        public static void menuOperacions()
+        public static void temaOperacions()
         {
             char resposta;
             int comptador = 0;
@@ -116,6 +116,50 @@ namespace JocDePreguntes
 
             Console.WriteLine("Pregunta 5: Quant és 3 + (3 x 3) ?");
             Console.WriteLine(" A) 18 \n B) 6 \n C) 12 \n D) 3 \n");
+            Console.Write("La teva resposta és: ");
+            resposta = Convert.ToChar(Console.ReadLine());
+            if (resposta == 'C' || resposta == 'c') { Console.WriteLine("Correcte! \n"); comptador++; }
+            else Console.WriteLine("Incorrecte :( \n");
+
+            Console.WriteLine("El teu resultat és de {0} / 5 ", comptador);
+        }
+
+        public static void temaSmite()
+        {
+            char resposta;
+            int comptador = 0;
+            Console.WriteLine("Tema de Smite! Endivina quina es la resposta correcta de les 5 preguntes seguents. \n");
+
+            Console.WriteLine("Pregunta 1: Quants personatges jugables hi ha actualment en Smite?");
+            Console.WriteLine(" A) 100 \n B) 90 \n C) 56 \n D) 112 \n");
+            Console.Write("La teva resposta és: ");
+            resposta = Convert.ToChar(Console.ReadLine());
+            if (resposta == 'D' || resposta == 'd') { Console.WriteLine("Correcte! \n"); comptador++; }
+            else Console.WriteLine("Incorrecte :( \n");
+
+            Console.WriteLine("Pregunta 2: Quin d'aquests personatges es de tipus cazador");
+            Console.WriteLine(" A) Ymir \n B) Cupid \n C) Sobek \n D) Ra \n");
+            Console.Write("La teva resposta és: ");
+            resposta = Convert.ToChar(Console.ReadLine());
+            if (resposta == 'B' || resposta == 'b') { Console.WriteLine("Correcte! \n"); comptador++; }
+            else Console.WriteLine("Incorrecte :( \n");
+
+            Console.WriteLine("Pregunta 3: Quin es el personatge més gran? (altura) ");
+            Console.WriteLine(" A) Chuthulu \n B) Ymir \n C) Jorgurmandr \n D) Ratatoskr \n");
+            Console.Write("La teva resposta és: ");
+            resposta = Convert.ToChar(Console.ReadLine());
+            if (resposta == 'A' || resposta == 'a') { Console.WriteLine("Correcte! \n"); comptador++; }
+            else Console.WriteLine("Incorrecte :( \n");
+
+            Console.WriteLine("Pregunta 4: Quants modes de joc hi ha actualment a Smite?");
+            Console.WriteLine(" A) 8 \n B) 4 \n C) 5 \n D) 9 \n");
+            Console.Write("La teva resposta és: ");
+            resposta = Convert.ToChar(Console.ReadLine());
+            if (resposta == 'D' || resposta == 'd') { Console.WriteLine("Correcte! \n"); comptador++; }
+            else Console.WriteLine("Incorrecte :( \n");
+
+            Console.WriteLine("Pregunta 5: Quin es el maxim de jugadors que pot tenir una partida?");
+            Console.WriteLine(" A) 2 \n B) 20 \n C) 10 \n D) 5 \n");
             Console.Write("La teva resposta és: ");
             resposta = Convert.ToChar(Console.ReadLine());
             if (resposta == 'C' || resposta == 'c') { Console.WriteLine("Correcte! \n"); comptador++; }
